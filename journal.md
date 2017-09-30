@@ -47,7 +47,7 @@ The logs you make of adds to your git repository can be seen by typing git log.
 
 #### Adding the journal to Github
 
-Github is a remote internet server you can use to upload (push) and retrieve (pull) your commits (we are using it for the journal). It is partcualarly helpful for group projects as it allows multiple people to work on it from seperate loactions.
+Github is a remote internet server you can use to upload (push) and retrieve (pull) your commits (we are using it for the journal). 
 
 To do this you have to create an empty repository on your github account, then using the commands:
 
