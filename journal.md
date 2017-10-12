@@ -24,9 +24,11 @@ $ rm hello.md
 $ rm -rf # be careful with that one!  
 $ cat /proc/cpuinfo # is 'cpuinfo' a file??  
 
-When we entered the code above startig with $, a message saying command not found was displayed. This is because $ is automatically placed infront of your code, so you do not have to enter it yourself. 
+When we entered the code above startig with $, a message saying command not found was displayed. 
+$ is automatically placed infront code
+ no need to enter it again 
 
-When removing the $ infront of the code it worked and found out the use off the following terms:
+Remove the $ code- worked 
 
 >echo - write arguments to outputs  
 >cat - read files  
@@ -36,18 +38,20 @@ cp - copy
 
 #### Making a git repository
 
-Started by typing git init to create a repository in the files.
-Then:
+typing git init to create a repository 
+
 $ git config user.name "Firstname Surname"  
 $ git config user.email "<email>"  
 
-Then added the journal to the repositorry by typing git add journal.md, then a new commit using git commit.
+Then added the journal to the repositorry by typing git add journal.md
+  new commit using git commit
 
 The logs you make of adds to your git repository can be seen by typing git log.
 
 #### Adding the journal to Github
 
-Github is a remote internet server you can use to upload (push) and retrieve (pull) your commits (we are using it for the journal). 
+Github - remote internet server 
+  upload (push) and retrieve (pull) your commits 
 
 To do this you have to create an empty repository on your github account, then using the commands:
 
@@ -56,7 +60,9 @@ To do this you have to create an empty repository on your github account, then u
 
 Then we logged into the github account through the terminal, and the journal was uploaded to my github.
 
-To upload the file after changes again, we just had to type git add journal.md, git commit, then git push. Then using git pull you can retreive the file.
+To upload - git add journal.md, git commit, then git push
+Using git pull you can retreive the file.
+
 
 ### Hacking into the robot
 
@@ -81,6 +87,31 @@ enter name mine was shrek.py
 then enter  
   
 then to send to the robot type python shrek.py  
+
+
+
+
+### Building a DC motor
+
+#### Commutator:
+Cork and electric tape on two sides
+
+#### Armature
+Copper wire: 80 turn (minimum of 60)
+Sandpaper ends and solder it 
+
+#### Shaft
+Built shaft with paperclips
+  magnets opposite each other
+  
+#### Brushes
+Electric tape
+  -we had a couple of problems as it made the rotation uneven, the cork got stuck
+  
+  
+
+
+
 
 
 
