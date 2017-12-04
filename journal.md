@@ -110,6 +110,38 @@ Electric tape
   
   
 
+#### Building a Robotic Arm
+### Experimenting with the motors
+We wanted to move the motor to one way completly than the other
+ 
+ put this to tyhe journal
+ 
+ #include 
+Servo myservo; // create servo object to control a servo
+
+int potpin = 0; // analog pin used to connect the potentiometer
+int val=0; // variable to read the value from the analog pin
+int val2=0;
+
+void setup() {
+myservo.attach(3,700,2000); // attaches the servo on pin 9 to the servo object
+}
+
+void loop() {
+
+for (val==0; val<=180; val++)
+{
+myservo.write(val); // sets the servo position according to the scaled value
+delay(15); //Waits for servo to get there
+}
+
+for (val==180; val>=0; val--)
+{
+myservo.write(val); // sets the servo position according to the scaled value
+delay(15); //Waits for servo to get there
+}
+
+}
 
 
 
