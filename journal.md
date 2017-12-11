@@ -146,4 +146,6 @@ delay(15); //Waits for servo to get there
 
 
 
-
+IT WORKS! KINDA. BUT IT WORKS.
+we connected the two motor to one power pin
+and then to the same outpot pin as well. (no, its not on fire... SUCCES)
