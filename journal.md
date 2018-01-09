@@ -4,9 +4,6 @@
 ### 25th of September
 
 
-[TEST] (test.md)
-=======
-
 
 #### First markdown document
 
