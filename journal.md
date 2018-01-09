@@ -4,6 +4,10 @@
 ### 25th of September
 
 
+[TEST] (test.md)
+=======
+
+
 #### First markdown document
 
 Markdown - formating language
@@ -93,30 +97,114 @@ then to send to the robot type python shrek.py
 
 
 ### Building a DC motor
+We tried to build a DC motor from sratch. We used magnets, paper clips and electric tape. 
+
+We used the design given in the labsheets: 
 
 #### Commutator:
-Cork and electric tape on two sides
+-Cork and electric tape on two sides
 
 #### Armature
-Copper wire: 80 turn (minimum of 60)
-Sandpaper ends and solder it 
+-Copper wire: 80 turn (minimum of 60)
+-Sandpaper ends and solder it 
+      We had problems with the wires, we didnt get any voltage.
+          After rewireing 2 times, we found that we didnt sand the ends properly, so we re did them and after that it worked
 
 #### Shaft
-Built shaft with paperclips
+-Built shaft with paperclips
+     we had problems with the paperclips, the nails holding the cork got stuck, and didnt let the cork turn 
+        we re did the shaft, trying to get a perfect loop with the paperclips so the cork can turn - it did. 
   magnets opposite each other
   
 #### Brushes
-Electric tape
-  -we had a couple of problems as it made the rotation uneven, the cork got stuck
+-Electric tape
+  we had a couple of problems as it made the rotation uneven, the cork got stuck (VIDEO)
+     we re did them with longer tapes, so it didnt get stuck in the end of it
+     
+https://www.youtube.com/watch?v=N0y_D7YMK28   The video shows our DC motor and the problems wit the brushes
   
+After this we added a second coil to our motor.
+We rebuilt the shaft with LEGO and attached a wheel to the end of the cork to see its rotation and to help our next task, the encoder.
+https://www.youtube.com/watch?v=8WvBiNtY8GU Video shos the new shaft
+
+### Incremental Encoder
+#### Understanding the basics
+  First we took some time to understand how the encoder works
+     We have 3 componets
+        -LED light source
+        -phototransistor detector
+        -Paper with holes on it 
+     
+  As the paper turns, the light from the LED passes through the holes, reaching the detector. 
+      because of the holes, the signal is not constant
+         
+#### Building the circuit and adding thr encoder
+  We built the circuit provided in the labsheets
+     using 1K and 10K ohm resistors
+     
+  It was working, we checked if we get any voltage and we did. 
+     if the LED is blocked the voltage across will rise
+      
+ We tried adding the encoder, but it was to thick, and got stuck between the reciever and the light source.
+   we used a different kind of paper and it worked
+   
+#### Arduino
+  We connected our encoder to the arduino board and tested with the provided code
   
+#### Motor Control with Arduino  
+ We got the Arduino kit out of the store and put it together
+      put the motor shield on the board
+      
+ We connected the motor to Chanel A on the motor shield and Set up the Arduino program
+    We used the code provided, but the Pins needed to be changed
+    
+PinMode(12, OUTPUT); //  Controlls the direction of the motor (Forward or backwards)
+pinMode(9, OUTPUT); //   Start or stops the motor
+
+You can controll the speen in the analogWrite(X, Y); command
+255 is full speed
+ 
+Our code broke down to an easier form was:
+  
+ ```c
+// ...
+Set forward direction
+start motors 
+wait
+stop motors
+set backwards direction
+start motors
+....
+// ...
+```
+     
+Later when we experimented with the robot arm, we made the motor to move around one way completly then to the other. (code inserted there.)     
+         
+
+#### Stepper motors
+ First we took some time to understand how the encoder works, using the lecture slides and some researh on the internet.
+ 
+ XXXXX
+We did the following modes: 
+
+Full-step 
+Double-step mode 
+Half-step mode 
+Micro-step mode  (we couldnt do this one)
+
+we wrote a truth table for each of them and acordint to it, wrote the code.
+
+
+INSER CODE HERE AND TRUTH TABLES!!! (PICTURE)
+ 
 
 #### Building a Robotic Arm
 ### Experimenting with the motors
 We wanted to move the motor to one way completly than the other
  
- put this to tyhe journal
- 
+   
+ ```c
+// ...
  #include 
 Servo myservo; // create servo object to control a servo
 
@@ -141,12 +229,19 @@ for (val==180; val>=0; val--)
 myservo.write(val); // sets the servo position according to the scaled value
 delay(15); //Waits for servo to get there
 }
-
 }
+// ...
+```
 
+Unfortunatelly I  had to miss a couple of labs after this so the speed of progressed slowed down. 
+I designed a 3d model for our robotic arm. 
+The idea was to have the motor's rotors fit into a hole exactly the shape and size as the rotors and then as it cannot move out of the whole it moves the whole arm. 
+https://www.youtube.com/watch?v=f7zUKXsmWtg  the final design.
 
+we printed it and assembled it.
 
-
+we then loaded the code and tested the robotic arm.
 IT WORKS! KINDA. BUT IT WORKS.
-we connected the two motor to one power pin
-and then to the same outpot pin as well. (no, its not on fire... SUCCES)
+we connected the two motor to one power pin (soldered them together)
+and then to the same output pin as well. (no, its not on fire... SUCCES)
+https://youtu.be/cOelTML7cZo Robotic arm in motion, using both motor.
