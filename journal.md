@@ -117,10 +117,12 @@ We used the design given in the labsheets:
 -Electric tape
   we had a couple of problems as it made the rotation uneven, the cork got stuck (VIDEO)
      we re did them with longer tapes, so it didnt get stuck in the end of it
-  
+     
+https://www.youtube.com/watch?v=N0y_D7YMK28   The video shows our DC motor and the problems wit the brushes
   
 After this we added a second coil to our motor.
-We rebuilt the shaft with LEGO (PICTURE) and attached a wheel to the end of the cork to see its rotation and to help our next task, the encoder.
+We rebuilt the shaft with LEGO and attached a wheel to the end of the cork to see its rotation and to help our next task, the encoder.
+https://www.youtube.com/watch?v=8WvBiNtY8GU Video shos the new shaft
 
 ### Incremental Encoder
 #### Understanding the basics
@@ -197,8 +199,9 @@ INSER CODE HERE AND TRUTH TABLES!!! (PICTURE)
 ### Experimenting with the motors
 We wanted to move the motor to one way completly than the other
  
- put this to the journal
- 
+   
+ ```c
+// ...
  #include 
 Servo myservo; // create servo object to control a servo
 
@@ -223,12 +226,19 @@ for (val==180; val>=0; val--)
 myservo.write(val); // sets the servo position according to the scaled value
 delay(15); //Waits for servo to get there
 }
-
 }
+// ...
+```
 
+Unfortunatelly I  had to miss a couple of labs after this so the speed of progressed slowed down. 
+I designed a 3d model for our robotic arm. 
+The idea was to have the motor's rotors fit into a hole exactly the shape and size as the rotors and then as it cannot move out of the whole it moves the whole arm. 
+https://www.youtube.com/watch?v=f7zUKXsmWtg  the final design.
 
+we printed it and assembled it.
 
-
+we then loaded the code and tested the robotic arm.
 IT WORKS! KINDA. BUT IT WORKS.
-we connected the two motor to one power pin
-and then to the same outpot pin as well. (no, its not on fire... SUCCES)
+we connected the two motor to one power pin (soldered them together)
+and then to the same output pin as well. (no, its not on fire... SUCCES)
+https://youtu.be/cOelTML7cZo Robotic arm in motion, using both motor.
