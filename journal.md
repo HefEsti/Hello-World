@@ -191,9 +191,8 @@ Half-step mode
 Micro-step mode  (we couldnt do this one)
 
 we wrote a truth table for each of them and acordint to it, wrote the code.
+[Codes](https://github.com/HefEsti/ROCO222/blob/master/allmotorcode.txt)
 
-
-INSER CODE HERE AND TRUTH TABLES!!! (PICTURE)
  
 
 #### Building a Robotic Arm
