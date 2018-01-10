@@ -12,8 +12,6 @@ Used as it is easy to convert to HTML and other languages.
 
 #### Command-line 101
 
-![image-title-here](file:///home/student/Pictures/codeHELLO.png){:class="img-responsive"}
-
 $ ls  
 $ cd /tmp  
 $ cd $HOME # what are those things starting with '$'?  
