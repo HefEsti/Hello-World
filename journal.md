@@ -95,6 +95,8 @@ then to send to the robot type python shrek.py
 
 ### Building a DC motor
 We tried to build a DC motor from sratch. We used magnets, paper clips and electric tape. 
+![alt text](https://github.com/HefEsti/ROCO222/blob/master/26134019_1933000850046889_34657071_o.jpg)
+
 
 We used the design given in the labsheets: 
 
@@ -230,7 +232,7 @@ delay(15); //Waits for servo to get there
 }
 // ...
 ```
-
+![alt text](https://github.com/HefEsti/ROCO222/blob/master/26772522_1947747018572272_1047964130_o.jpg)
 Unfortunatelly I  had to miss a couple of labs after this so the speed of progressed slowed down. 
 I designed a 3d model for our robotic arm. 
 The idea was to have the motor's rotors fit into a hole exactly the shape and size as the rotors and then as it cannot move out of the whole it moves the whole arm.
