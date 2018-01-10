@@ -115,14 +115,15 @@ We used the design given in the labsheets:
   
 #### Brushes
 -Electric tape
-  we had a couple of problems as it made the rotation uneven, the cork got stuck (VIDEO)
+  we had a couple of problems as it made the rotation uneven, the cork got stuck 
      we re did them with longer tapes, so it didnt get stuck in the end of it
-     
-https://www.youtube.com/watch?v=N0y_D7YMK28   The video shows our DC motor and the problems wit the brushes
+    
+[The video shows our DC motor and the problems wit the brushes](https://www.youtube.com/watch?v=N0y_D7YMK28 )
+
   
 After this we added a second coil to our motor.
 We rebuilt the shaft with LEGO and attached a wheel to the end of the cork to see its rotation and to help our next task, the encoder.
-https://www.youtube.com/watch?v=8WvBiNtY8GU Video shos the new shaft
+[Video shows the new shaft](https://www.youtube.com/watch?v=8WvBiNtY8GU  )
 
 ### Incremental Encoder
 #### Understanding the basics
@@ -181,7 +182,7 @@ Later when we experimented with the robot arm, we made the motor to move around 
 #### Stepper motors
  First we took some time to understand how the encoder works, using the lecture slides and some researh on the internet.
  
- XXXXX
+
 We did the following modes: 
 
 Full-step 
@@ -232,8 +233,10 @@ delay(15); //Waits for servo to get there
 
 Unfortunatelly I  had to miss a couple of labs after this so the speed of progressed slowed down. 
 I designed a 3d model for our robotic arm. 
-The idea was to have the motor's rotors fit into a hole exactly the shape and size as the rotors and then as it cannot move out of the whole it moves the whole arm. 
-https://www.youtube.com/watch?v=f7zUKXsmWtg  the final design.
+The idea was to have the motor's rotors fit into a hole exactly the shape and size as the rotors and then as it cannot move out of the whole it moves the whole arm.
+
+[ the final design](https://www.youtube.com/watch?v=f7zUKXsmWtg )
+
 
 we printed it and assembled it.
 
@@ -241,4 +244,5 @@ we then loaded the code and tested the robotic arm.
 IT WORKS! KINDA. BUT IT WORKS.
 we connected the two motor to one power pin (soldered them together)
 and then to the same output pin as well. (no, its not on fire... SUCCES)
-https://youtu.be/cOelTML7cZo Robotic arm in motion, using both motor.
+[Robotic arm in motion, using both motor](https://youtu.be/cOelTML7cZ )
+
