@@ -1,0 +1,175 @@
+#define DIR_A 12
+#define DIR_B 13
+
+#define SPEED_A 3
+#define SPEED_B 11
+
+#define PERIOD 3
+
+
+void setup() {
+//Setup Channel A
+pinMode(12, OUTPUT); //Initiates Motor Channel A pin
+pinMode(9, OUTPUT); //Initiates Brake Channel A pin
+}
+
+void setup2() {
+//Setup channel B
+pinMode(13, OUTPUT);
+pinMode(8, OUTPUT); 
+digitalWrite(9, LOW); //Disengage the Brake for Channel A
+digitalWrite(8,  LOW); //Disengage the Brake for Channel B
+}
+
+void loop(){
+
+halfstep();
+}
+
+
+void halfstep () {
+  
+digitalWrite(DIR_A, HIGH); //Establishes forward direction of Channel A
+digitalWrite(DIR_B, HIGH); //Establishes forward direction Channel B
+
+analogWrite(SPEED_A, 255); //Spins the motor on Channel A at full speed
+analogWrite(SPEED_B, 0); //Spins the motor on Channel B at full speed
+
+delay(PERIOD);
+
+digitalWrite(DIR_A, HIGH); //Establishes forward direction of Channel A
+digitalWrite(DIR_B, HIGH); //Establishes forward direction Channel B
+
+analogWrite(SPEED_A, 255); //Spins the motor on Channel A at full speed
+analogWrite(SPEED_B, 255); //Spins the motor on Channel B at full speed
+
+delay(PERIOD);
+
+digitalWrite(DIR_A, HIGH); //Establishes forward direction of Channel A
+digitalWrite(DIR_B, HIGH); //Establishes forward direction Channel B
+
+analogWrite(SPEED_A, 0); //Spins the motor on Channel A at full speed
+analogWrite(SPEED_B, 255); //Spins the motor on Channel B at full speed
+
+delay(PERIOD);
+
+digitalWrite(DIR_A, LOW); //Establishes forward direction of Channel A
+digitalWrite(DIR_B, HIGH); //Establishes forward direction Channel B
+
+analogWrite(SPEED_A, 255); //Spins the motor on Channel A at full speed
+analogWrite(SPEED_B, 255); //Spins the motor on Channel B at full speed
+
+delay(PERIOD);
+
+digitalWrite(DIR_A, LOW); //Establishes forward direction of Channel A
+digitalWrite(DIR_B, HIGH); //Establishes forward direction Channel B
+
+analogWrite(SPEED_A, 255); //Spins the motor on Channel A at full speed
+analogWrite(SPEED_B, 0); //Spins the motor on Channel B at full speed
+
+delay(PERIOD);
+
+digitalWrite(DIR_A, LOW); //Establishes forward direction of Channel A
+digitalWrite(DIR_B, LOW); //Establishes forward direction Channel B
+
+analogWrite(SPEED_A, 255); //Spins the motor on Channel A at full speed
+analogWrite(SPEED_B, 255); //Spins the motor on Channel B at full speed
+
+delay(PERIOD);
+
+digitalWrite(DIR_A, HIGH); //Establishes forward direction of Channel A
+digitalWrite(DIR_B, LOW); //Establishes forward direction Channel B
+
+analogWrite(SPEED_A, 0); //Spins the motor on Channel A at full speed
+analogWrite(SPEED_B, 255); //Spins the motor on Channel B at full speed
+
+delay(PERIOD);
+
+digitalWrite(DIR_A, HIGH); //Establishes forward direction of Channel A
+digitalWrite(DIR_B, LOW); //Establishes forward direction Channel B
+
+analogWrite(SPEED_A, 255); //Spins the motor on Channel A at full speed
+analogWrite(SPEED_B, 255); //Spins the motor on Channel B at full speed
+
+delay(PERIOD);
+  }
+
+void fullsteptwo() {
+
+digitalWrite(DIR_A, HIGH); //Establishes forward direction of Channel A
+digitalWrite(DIR_B, HIGH); //Establishes forward direction Channel B
+
+analogWrite(SPEED_A, 255); //Spins the motor on Channel A at full speed
+analogWrite(SPEED_B, 255); //Spins the motor on Channel B at full speed
+
+delay(PERIOD);
+
+digitalWrite(DIR_A, LOW); //Establishes forward direction of Channel A
+digitalWrite(DIR_B, HIGH); //Establishes forward direction Channel B
+
+analogWrite(SPEED_A, 255); //Spins the motor on Channel A at full speed
+analogWrite(SPEED_B, 255); //Spins the motor on Channel B at full speed
+
+ delay(PERIOD);
+
+ 
+digitalWrite(DIR_A, LOW); //Establishes forward direction of Channel A
+digitalWrite(DIR_B, LOW); //Establishes forward direction Channel B
+
+analogWrite(SPEED_A, 255); //Spins the motor on Channel A at full speed
+analogWrite(SPEED_B, 255); //Spins the motor on Channel B at full speed
+
+ delay(PERIOD);
+
+ 
+digitalWrite(DIR_A, HIGH); //Establishes forward direction of Channel A
+digitalWrite(DIR_B, LOW); //Establishes forward direction Channel B
+
+analogWrite(SPEED_A, 255); //Spins the motor on Channel A at full speed
+analogWrite(SPEED_B, 255); //Spins the motor on Channel B at full speed
+
+ delay(PERIOD);
+  }
+void fullstep(){
+  //forward @ full speed
+
+digitalWrite(DIR_A, HIGH); //Establishes forward direction of Channel A
+digitalWrite(DIR_B, HIGH); //Establishes forward direction Channel B
+
+analogWrite(SPEED_A, 255); //Spins the motor on Channel A at full speed
+analogWrite(SPEED_B, 0); //Spins the motor on Channel B at full speed
+
+delay(PERIOD);
+
+analogWrite(SPEED_A, 0); //Spins the motor on Channel A at full speed
+analogWrite(SPEED_B, 255); //Spins the motor on Channel B at full speed
+
+delay(PERIOD);
+
+digitalWrite(DIR_A, LOW); //Establishes forward direction of Channel A
+digitalWrite(DIR_B, LOW); //Establishes forward direction Channel B
+
+analogWrite(SPEED_A, 255); //Spins the motor on Channel A at full speed
+analogWrite(SPEED_B, 0); //Spins the motor on Channel B at full speed
+
+delay(PERIOD);
+
+
+analogWrite(SPEED_A, 0); //Spins the motor on Channel A at full speed
+analogWrite(SPEED_B, 255); //Spins the motor on Channel B at full speed
+
+delay(PERIOD);
+
+//digitalWrite(12, HIGH); //Establishes forward direction of Channel A
+//digitalWrite(9, LOW); //Disengage the Brake for Channel A
+//digitalWrite(13, HIGH); //Establishes forward direction for Channel B
+//digitalWrite(8,  LOW); //Disengage the Brake for Channel B
+
+//analogWrite(3, 0); //Spins the motor on Channel A at full speed
+//analogWrite(11, 255); //Spins the motor on Channel A at full speed
+
+//delay(3000);
+//  }
+
+  
+}
